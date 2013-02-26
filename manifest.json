@@ -1,0 +1,8 @@
+{
+    "name": "JSBlock",
+    "version": "0.2",
+    "description": "Block scripts from certain domains",
+    "manifest_version": 2,
+    "permissions": ["declarativeWebRequest", "webRequest", "webRequestBlocking", "*://*/*"],
+    "background": {"scripts": ["jsblock.js"], "persistent": true}
+}
