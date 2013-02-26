@@ -12,7 +12,6 @@ chrome.runtime.onInstalled.addListener(function () {
     // see http://developer.chrome.com/extensions/webRequest.html
     // NOTE: when this is used this script must be persistent
     else chrome.webRequest.onBeforeRequest.addListener(function (e) {
-        console.log(e);
         return {cancel:true};
     }, {urls:domainsBlockedFromScripting.map(function (host) { return "*://*."+host+"/*"; }), types:['script']}, ['blocking']);
 }); 
